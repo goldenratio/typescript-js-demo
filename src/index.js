@@ -32,6 +32,7 @@ class Foo {
   }
 
   test() {
+    console.log('calling a public function');
     // todo: TSC should throw error
     this._gameConfig = {
       platform: 'SOCIAL',
@@ -45,7 +46,7 @@ class Foo {
    * @private
    */
   bar() {
-    //
+    console.log('calling a private function');
   }
 }
 
