@@ -1,15 +1,15 @@
 /**
  * @type {GameConfig}
  */
-const gameConfig = Object.freeze({
+const gameConfig = {
   platform: 'SOCIAL',
   gameSkin: '',
   isCascading: false,
   assetPackageType: 'base64'
-});
+};
 
-// todo: TSC should throw error
-gameConfig.platform = 'CASH';
+// TSC should will throw error (works)
+// gameConfig.platform = 'CASH';
 
 // class example
 class Foo {
