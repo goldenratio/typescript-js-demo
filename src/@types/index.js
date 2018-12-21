@@ -17,3 +17,24 @@
 /**
  * @typedef {Readonly<GameConfigVO>} GameConfig
  */
+
+
+/**
+ * @interface
+ */
+class IFoo {
+
+  /**
+   * @return {number}
+   */
+  test() {
+    return 0;
+  }
+
+  /**
+   * @return {void}
+   */
+  bark() {
+    //
+  }
+}

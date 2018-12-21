@@ -13,8 +13,11 @@ const gameConfig = {
 
 console.log('gameConfig: ', gameConfig);
 
+// todo: Foo doesn't implement IFoo properly, TSC should throw error
 /**
  * Foo Class
+ * @class
+ * @implements {IFoo}
  */
 class Foo {
 
@@ -39,18 +42,21 @@ class Foo {
   }
 
   /**
-   * @return {number}
+   * @return {string}
    */
   test() {
     console.log('calling a public function');
-    // todo: TSC should throw error
+
+    // todo: `_gameConfig` is readonly and const. TSC should throw error
     this._gameConfig = {
       platform: 'SOCIAL',
       gameSkin: '',
       isCascading: false,
       assetPackageType: 'base64'
     };
-    return 100;
+
+    // todo: return type doesn't match interface, TSC should throw error
+    return '100';
   }
 
   /**
@@ -65,8 +71,8 @@ class Foo {
 const foo = new Foo();
 foo.test();
 
-// todo: TSC should throw error
+// todo: calling private function, TSC should throw error
 foo.bar();
 
-// todo: TSC should throw error
+// todo: calling private member, TSC should throw error
 console.log(foo._gameConfig);
