@@ -9,8 +9,6 @@
     "target": "esnext",
     "allowJs": true,
     "checkJs": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "strict": true,
     "baseUrl": ".",
     "lib": [

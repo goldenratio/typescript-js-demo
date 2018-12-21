@@ -16,7 +16,7 @@ const defaultConfig = (isProduction) => {
     module: {
       rules: [
         {
-          test: /\.jsx?$/,
+          test: /\.js?$/,
           use: 'ts-loader',
           exclude: /node_modules/
         },

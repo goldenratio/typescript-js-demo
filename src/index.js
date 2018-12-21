@@ -1,28 +1,29 @@
 /**
  * @type {GameConfig}
- * @readonly
  */
-const gameConfig = {
+const gameConfig = Object.freeze({
   platform: 'SOCIAL',
   gameSkin: '',
   isCascading: false,
   assetPackageType: 'base64'
-};
+});
 
+// todo: TSC should throw error
 gameConfig.platform = 'CASH';
-console.log(gameConfig);
-
 
 // class example
 class Foo {
 
-  constructor() {
+  /**
+   * @type {GameConfig}
+   * @private
+   * @const
+   * @readonly
+   */
+  _gameConfig;
 
-    /**
-     * @type {GameConfig}
-     * @const
-     */
-    this.gameConfig = {
+  constructor() {
+    this._gameConfig = {
       platform: 'SOCIAL',
       gameSkin: '',
       isCascading: false,
@@ -31,7 +32,8 @@ class Foo {
   }
 
   test() {
-    this.gameConfig = {
+    // todo: TSC should throw error
+    this._gameConfig = {
       platform: 'SOCIAL',
       gameSkin: '',
       isCascading: false,
@@ -49,4 +51,9 @@ class Foo {
 
 const foo = new Foo();
 foo.test();
+
+// todo: TSC should throw error
 foo.bar();
+
+// todo: TSC should throw error
+console.log(foo._gameConfig);
