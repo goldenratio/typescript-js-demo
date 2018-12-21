@@ -8,7 +8,7 @@ const gameConfig = {
   assetPackageType: 'base64'
 };
 
-// TSC should will throw error (works)
+// TSC will throw error (works)
 // gameConfig.platform = 'CASH';
 
 // class example
