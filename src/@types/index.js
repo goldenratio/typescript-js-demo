@@ -7,9 +7,13 @@
  */
 
 /**
- * @typedef {object} GameConfig
+ * @typedef {object} GameConfigVO
  * @property {PLATFORM} platform
  * @property {string} gameSkin
  * @property {boolean} isCascading
  * @property {ASSET_PACKAGE_TYPE} assetPackageType
+ */
+
+/**
+ * @typedef {Readonly<GameConfigVO>} GameConfig
  */
