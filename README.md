@@ -1,2 +1,2 @@
 # typescript-js-demo
-Perform type check in JS using TypeScript
+Perform type check in JS using TypeScript Compiler
