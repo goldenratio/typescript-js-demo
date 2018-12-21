@@ -1,9 +1,9 @@
 /**
- * @typedef {string} PLATFORM
+ * @typedef {('SOCIAL' | 'CASH')} PLATFORM
  */
 
 /**
- * @typedef {string} ASSET_PACKAGE_TYPE
+ * @typedef {('base64' | 'url')} ASSET_PACKAGE_TYPE
  */
 
 /**

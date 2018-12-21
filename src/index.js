@@ -8,10 +8,21 @@ const gameConfig = {
   assetPackageType: 'base64'
 };
 
-// TSC will throw error (works)
-// gameConfig.platform = 'CASH';
+// cannot write on readonly property, TSC will throw error
+gameConfig.platform = 'CASH';
+
+/**
+ * @type {GameConfig}
+ */
+const gameTempConfig = {
+  platform: 'ASDADAD', // invalid enum, TSC will throw error
+  gameSkin: '',
+  isCascading: true,
+  assetPackageType: 'asd' // invalid enum, TSC will throw error
+};
 
 console.log('gameConfig: ', gameConfig);
+console.log('gameTempConfig: ', gameTempConfig);
 
 // todo: Foo doesn't implement IFoo properly, TSC should throw error
 /**
