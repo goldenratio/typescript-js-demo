@@ -12,6 +12,8 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^1.0.0",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
     "file-loader": "^2.0.0",
     "fs": "0.0.1-security",
     "html-loader": "^0.5.5",

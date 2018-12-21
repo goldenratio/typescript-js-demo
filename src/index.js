@@ -11,26 +11,36 @@ const gameConfig = {
 // TSC will throw error (works)
 // gameConfig.platform = 'CASH';
 
-// class example
+console.log('gameConfig: ', gameConfig);
+
+/**
+ * Foo Class
+ */
 class Foo {
 
   /**
-   * @type {GameConfig}
    * @private
-   * @const
    * @readonly
+   * @const
+   * @type {GameConfig}
    */
   _gameConfig;
 
+  /**
+   * Create Foo
+   */
   constructor() {
     this._gameConfig = {
       platform: 'SOCIAL',
       gameSkin: '',
       isCascading: false,
       assetPackageType: 'base64'
-    }
+    };
   }
 
+  /**
+   * @return {number}
+   */
   test() {
     console.log('calling a public function');
     // todo: TSC should throw error
@@ -39,11 +49,13 @@ class Foo {
       gameSkin: '',
       isCascading: false,
       assetPackageType: 'base64'
-    }
+    };
+    return 100;
   }
 
   /**
    * @private
+   * @return void
    */
   bar() {
     console.log('calling a private function');
