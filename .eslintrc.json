@@ -25,6 +25,7 @@
       "error",
       "always"
     ],
+    "no-unused-vars": "off",
     "no-console": "off",
     "require-jsdoc": ["error", {
       "require": {

@@ -21,9 +21,6 @@ const gameTempConfig = {
   assetPackageType: 'asd' // invalid enum, TSC will throw error
 };
 
-console.log('gameConfig: ', gameConfig);
-console.log('gameTempConfig: ', gameTempConfig);
-
 // todo: Foo doesn't implement IFoo properly, TSC should throw error
 /**
  * Foo Class
@@ -72,7 +69,6 @@ class Foo {
 
   /**
    * @private
-   * @return void
    */
   bar() {
     console.log('calling a private function');
